@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<ruleset>
+    <description>Coding Standards</description>
+    <arg value="-colors" />
+    <arg value="s" />
+    <exclude-pattern>vendor/*</exclude-pattern>
+    <exclude-pattern>htdocs/wp/*</exclude-pattern>
+    <rule ref="WordPress" />
+</ruleset>

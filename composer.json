@@ -1,0 +1,31 @@
+{
+    "name": "wherd/wordpress-docker",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sérgio Leal",
+            "email": "hello@wherd.name",
+            "homepage": "https://wherd.name"
+        }
+    ],
+    "require": {
+        "php": ">=5.5",
+        "johnpbloch/wordpress": "*"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "*",
+        "wp-coding-standards/wpcs": "*"
+    },
+    "extra": {
+        "installer-paths": {
+            "htdocs/app/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
+            "htdocs/app/plugins/{$name}/": ["type:wordpress-plugin"],
+            "htdocs/app/themes/{$name}/": ["type:wordpress-theme"]
+        },
+        "wordpress-install-dir": "htdocs/wp"
+    },
+    "scripts": {
+        "fmt": ["vendor/bin/phpcbf ."],
+        "test": ["vendor/bin/phpcs -n -s ."]
+    }
+}
