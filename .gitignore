@@ -2,7 +2,6 @@
 .DS_Store
 composer.lock
 env.ini
-payload/config.sh
 
 # folders
 vendor
